@@ -20,7 +20,7 @@ import { ButtonLine } from '@components/ButtonLine';
 
 import { ScrollView } from 'react-native';
 
-export default function SignIn() {
+export default function SignUp() {
   return (
     <ScrollView 
     contentContainerStyle={{ flexGrow: 1 }}
@@ -38,9 +38,8 @@ export default function SignIn() {
         />
 
         <Center 
-          marginVertical={125} 
-          marginHorizontal={100}
-          width={200}
+          marginTop={130} 
+          marginBottom={95}
           alignItems='center'
           justifyContent='center'
         >
@@ -54,7 +53,6 @@ export default function SignIn() {
         </Center>
 
         <Center 
-          marginTop={50}
           alignItems='center'
           justifyContent='center'
         >
@@ -67,30 +65,30 @@ export default function SignIn() {
           </Heading>
 
           <Input
+            placeholder='Nome'
+            keyboardtype='default'
+          />
+          <Input
             placeholder='Email'
             keyboardtype='email-address'
-            />
+          />
           <Input
             placeholder='Senha'
             secureTextEntry
-            />
+          />
 
           <Button
-            title='Acessar' 
+            title='Cria e acessar' 
           />
 
-          <Text
-            marginTop={64}
-            marginBottom={18}
-            fontFamily={THEME.fonts.body}
-            color={THEME.colors.gray[100]}
-            fontSize={THEME.fontSizes.md}
+          <Center
+            marginTop={100}
           >
-            Ainda não tem acesso?
-          </Text>
-          <ButtonLine
-            title='Cria conta'
-          />
+            <ButtonLine
+              title='Voltar para o Login'
+            />
+          </Center>
+
       </Center>
       </VStack>
     </ScrollView>

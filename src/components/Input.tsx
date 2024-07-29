@@ -7,11 +7,12 @@ import { THEME } from 'src/global/theme/intex';
 
 interface TypeInput{
     placeholder: string
-    keyboardtype?: 'email-address'
+    keyboardtype?: 'email-address' | 'numeric' | 'default' | 'name-phone-pad'
     secureTextEntry?: true | false
+    autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined
 }
 
-export function Input({ placeholder,keyboardtype, secureTextEntry }:TypeInput) {
+export function Input({ placeholder,keyboardtype, secureTextEntry,autoCapitalize }:TypeInput) {
   return (
     <StackInput
         height={56}
@@ -29,7 +30,7 @@ export function Input({ placeholder,keyboardtype, secureTextEntry }:TypeInput) {
             flex={1}
             marginLeft={20}
             keyboardType={keyboardtype}
-            autoCapitalize='none'
+            autoCapitalize={autoCapitalize}
             secureTextEntry={secureTextEntry}
             placeholder={placeholder}
             color={THEME.colors.gray[100]}
