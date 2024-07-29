@@ -1,4 +1,3 @@
-import {  } from "@gluestack-ui/themed";
 
 export const THEME = {
     colors: {

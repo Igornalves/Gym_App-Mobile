@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { useNavigation } from '@react-navigation/native';
+
+import { AuthNavigatiorRoutesProps } from '@routes/auth.routes'
+
 import { 
   VStack, 
   Image, 
@@ -21,6 +25,13 @@ import { ButtonLine } from '@components/ButtonLine';
 import { ScrollView } from 'react-native';
 
 export default function SignIn() {
+
+  const navigation = useNavigation<AuthNavigatiorRoutesProps>();
+
+  function handleNewAccount() {
+    navigation.navigate('createUser')
+  }
+
   return (
     <ScrollView 
     contentContainerStyle={{ flexGrow: 1 }}
@@ -28,7 +39,7 @@ export default function SignIn() {
     >
       <VStack 
         flex={1}
-        backgroundColor={THEME.colors.gray[700]}
+        // backgroundColor={THEME.colors.gray[700]}
       >
         <Image 
           source={BackGroundImg} 
@@ -88,6 +99,7 @@ export default function SignIn() {
           </Text>
           <ButtonLine
             title='Cria conta'
+            onPress={handleNewAccount}
           />
       </Center>
       </VStack>

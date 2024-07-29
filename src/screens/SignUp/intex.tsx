@@ -19,8 +19,17 @@ import { Button } from '@components/Button';
 import { ButtonLine } from '@components/ButtonLine';
 
 import { ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { AuthNavigatiorRoutesProps } from '@routes/auth.routes';
 
 export default function SignUp() {
+
+  const navigation = useNavigation<AuthNavigatiorRoutesProps>();
+
+  function handleGoBack() {
+    navigation.goBack()
+  }
+
   return (
     <ScrollView 
     contentContainerStyle={{ flexGrow: 1 }}
@@ -28,7 +37,7 @@ export default function SignUp() {
     >
       <VStack 
         flex={1}
-        backgroundColor={THEME.colors.gray[700]}
+        // backgroundColor={THEME.colors.gray[700]}
       >
         <Image 
           source={BackGroundImg} 
@@ -86,6 +95,7 @@ export default function SignUp() {
           >
             <ButtonLine
               title='Voltar para o Login'
+              onPress={handleGoBack}
             />
           </Center>
 

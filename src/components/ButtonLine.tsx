@@ -3,14 +3,16 @@ import { THEME } from 'src/global/theme/intex';
 
 import {
     Button as ButtonBase, 
-    ButtonText 
+    ButtonText, 
 } from '@gluestack-ui/themed';
 
-interface TypeButton {
+import { ButtonProps } from 'react-native';
+
+interface TypeButton extends ButtonProps {
     title: string
 }
 
-export function ButtonLine({ title }:TypeButton) {
+export function ButtonLine({ title, ...rest }:TypeButton) {
   return (
     <ButtonBase
         height={65}
@@ -21,6 +23,7 @@ export function ButtonLine({ title }:TypeButton) {
         justifyContent='center'
         borderColor={THEME.colors.green[500]}
         borderWidth={1}
+        {...rest}
     >
         <ButtonText
             color={THEME.colors.green[700]}

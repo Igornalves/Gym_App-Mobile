@@ -5,12 +5,13 @@ import {
     Button as ButtonBase, 
     ButtonText 
 } from '@gluestack-ui/themed';
+import { ButtonProps } from 'react-native';
 
-interface Props {
+interface Props extends ButtonProps {
     title: string
 }
 
-export function Button({ title }: Props) {
+export function Button({ title, ...rest}: Props) {
   return (
     <ButtonBase
         height={65}
@@ -20,6 +21,7 @@ export function Button({ title }: Props) {
         $active-backgroundColor={THEME.colors.green[500]}
         justifyContent='center'
         backgroundColor={THEME.colors.green[700]}
+        {...rest}
     >
         <ButtonText
             color={THEME.colors.gray[100]}
