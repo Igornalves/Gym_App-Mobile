@@ -38,9 +38,8 @@ export default function SignIn() {
         />
 
         <Center 
-          marginVertical={125} 
-          marginHorizontal={100}
-          width={200}
+          marginTop={125}
+          marginBottom={155}
           alignItems='center'
           justifyContent='center'
         >
@@ -54,7 +53,6 @@ export default function SignIn() {
         </Center>
 
         <Center 
-          marginTop={50}
           alignItems='center'
           justifyContent='center'
         >
@@ -80,7 +78,7 @@ export default function SignIn() {
           />
 
           <Text
-            marginTop={64}
+            marginTop={70}
             marginBottom={18}
             fontFamily={THEME.fonts.body}
             color={THEME.colors.gray[100]}

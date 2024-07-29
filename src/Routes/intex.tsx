@@ -1,16 +1,12 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { AuthRoutes } from './auth.routes';
 
-const { Navigator, Screen } = createBottomTabNavigator();
-
-export default function TabRoutes() {
+export default function Routes() {
      return(
-      //  <Navigator>
-      //      <Screen
-      //          name=''
-      //          component={}
-      //      />
-      //  </Navigator>
+          <NavigationContainer>
+               <AuthRoutes/>
+          </NavigationContainer>
      );
 }
 
