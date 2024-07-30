@@ -1,7 +1,7 @@
 import React from 'react';
 import { Center, Text } from '@gluestack-ui/themed'
 
-export default function History() {
+export default function Exercices() {
   return (
     <Center 
       flex={1}
@@ -10,7 +10,7 @@ export default function History() {
         justifyContent: 'center'
     }}>
         <Text color='white'>
-          History
+          Exercices
         </Text>
     </Center>
   );

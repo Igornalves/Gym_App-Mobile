@@ -40,7 +40,8 @@ export default function SignUp() {
         // backgroundColor={THEME.colors.gray[700]}
       >
         <Image 
-          source={BackGroundImg} 
+          source={BackGroundImg}
+          defaultSource={BackGroundImg}
           alt='pessoas treinando para melherar a saude'
           resizeMode='contain'
           position='absolute'

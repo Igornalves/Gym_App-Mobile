@@ -1,10 +1,17 @@
 import React from 'react';
-import { Conteiner } from './style';
+import { Center, Text } from '@gluestack-ui/themed'
 
-export default function Page() {
+export default function Home() {
   return (
-    <Conteiner>
-       
-    </Conteiner>
+    <Center 
+      flex={1}
+      style={{ 
+        alignItems: 'center', 
+        justifyContent: 'center'
+    }}>
+        <Text color='white'>
+          Home
+        </Text>
+    </Center>
   );
 }
