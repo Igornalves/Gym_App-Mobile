@@ -1,17 +1,19 @@
 import React from 'react';
-import { Center, Text } from '@gluestack-ui/themed'
+import { Center, Text, VStack } from '@gluestack-ui/themed'
+import HomeHeader from '@components/HomeHeader';
+import Group from '@components/Group';
 
 export default function Home() {
   return (
-    <Center 
+    <VStack 
       flex={1}
-      style={{ 
-        alignItems: 'center', 
-        justifyContent: 'center'
-    }}>
-        <Text color='white'>
-          Home
-        </Text>
-    </Center>
+    >
+        <HomeHeader/>
+
+        <Group
+          name='costas'
+        />
+
+    </VStack>
   );
 }
