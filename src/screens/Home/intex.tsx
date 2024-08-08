@@ -11,9 +11,12 @@ import HomeHeader from '@components/HomeHeader';
 import Group from '@components/Group';
 import ExerciseCard from '@components/ExerciseCard';
 
-import { FlatList, View } from 'react-native';
-import { THEME } from 'src/global/theme/intex';
+import { 
+  FlatList, 
+  View 
+} from 'react-native';
 
+import { THEME } from 'src/global/theme/intex';
 
 export default function Home() {
 

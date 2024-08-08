@@ -1,5 +1,10 @@
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { 
+     NavigationContainer, 
+     DefaultTheme 
+} from '@react-navigation/native';
+
 import React from 'react';
+
 import { THEME } from 'src/global/theme/intex';
 import { Box } from '@gluestack-ui/themed';
 

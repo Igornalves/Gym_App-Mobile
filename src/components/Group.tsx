@@ -1,5 +1,10 @@
 import React from 'react';
-import { Text, Pressable } from '@gluestack-ui/themed';
+
+import { 
+  Text, 
+  Pressable 
+} from '@gluestack-ui/themed';
+
 import { TouchableOpacityProps } from 'react-native';
 import { THEME } from 'src/global/theme/intex';
 

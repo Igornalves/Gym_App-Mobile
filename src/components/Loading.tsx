@@ -1,8 +1,8 @@
 import { 
     Center, 
     Spinner,
-    VStack,
 } from "@gluestack-ui/themed";
+
 import { THEME } from "src/global/theme/intex";
 
 import { Text } from "react-native";

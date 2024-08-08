@@ -1,5 +1,12 @@
 import React from 'react';
-import { Heading, HStack, Text, VStack } from '@gluestack-ui/themed';
+
+import { 
+  Heading, 
+  HStack, 
+  Text, 
+  VStack 
+} from '@gluestack-ui/themed';
+
 import { THEME } from 'src/global/theme/intex';
 
 export default function HistoryCard() {

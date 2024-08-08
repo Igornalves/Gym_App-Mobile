@@ -1,4 +1,8 @@
-import { Center, Heading } from '@gluestack-ui/themed';
+import { 
+    Center, 
+    Heading 
+} from '@gluestack-ui/themed';
+
 import React from 'react';
 import { THEME } from 'src/global/theme/intex';
 

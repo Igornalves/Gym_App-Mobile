@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { Heading, Text, VStack } from '@gluestack-ui/themed'
+
+import { 
+  Heading, 
+  Text, 
+  VStack 
+} from '@gluestack-ui/themed'
+
 import ScreenHeader from '@components/ScreenHeader';
 import HistoryCard from '@components/HistoryCard';
 import { SectionList } from 'react-native';

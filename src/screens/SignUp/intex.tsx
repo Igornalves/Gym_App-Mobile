@@ -76,14 +76,17 @@ export default function SignUp() {
 
           <Input
             placeholder='Nome'
+            backgroundColor={THEME.colors.gray[700]}
             keyboardtype='default'
           />
           <Input
             placeholder='Email'
+            backgroundColor={THEME.colors.gray[700]}
             keyboardtype='email-address'
           />
           <Input
             placeholder='Senha'
+            backgroundColor={THEME.colors.gray[700]}
             secureTextEntry
           />
 

@@ -4,7 +4,7 @@ import { Image } from '@gluestack-ui/themed';
 import { THEME } from 'src/global/theme/intex';
 
 type Props = ImageProps & {
-    size: number,
+  size: number,
 }
 
 export default function UserPhoto({ size, ...rest }: Props) {

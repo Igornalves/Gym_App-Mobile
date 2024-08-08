@@ -78,10 +78,12 @@ export default function SignIn() {
 
           <Input
             placeholder='Email'
+            backgroundColor={THEME.colors.gray[700]}
             keyboardtype='email-address'
             />
           <Input
             placeholder='Senha'
+            backgroundColor={THEME.colors.gray[700]}
             secureTextEntry
             />
 

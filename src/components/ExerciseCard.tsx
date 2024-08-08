@@ -4,7 +4,6 @@ import {
   Image, 
   VStack,
   Text,
-  Icon
 } from '@gluestack-ui/themed';
 
 import React from 'react';
@@ -18,8 +17,7 @@ import { Entypo } from '@expo/vector-icons'
 
 import { THEME } from 'src/global/theme/intex';
 
-type Props = TouchableOpacityProps & {
-  
+type Props = TouchableOpacityProps & { 
 };
 
 export default function ExerciseCard({...rest}: Props) {

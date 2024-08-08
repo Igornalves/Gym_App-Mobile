@@ -2,17 +2,20 @@ import {
     Input as StackInput, 
     InputField, 
 } from '@gluestack-ui/themed'
+import { TextInputProps } from 'react-native';
 
 import { THEME } from 'src/global/theme/intex';
 
-interface TypeInput{
+type TypeInput = TextInputProps & {
     placeholder: string
+    isDisabled?: boolean
+    backgroundColor?: string
     keyboardtype?: 'email-address' | 'numeric' | 'default' | 'name-phone-pad'
     secureTextEntry?: true | false
     autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined
 }
 
-export function Input({ placeholder,keyboardtype, secureTextEntry,autoCapitalize }:TypeInput) {
+export function Input({ placeholder,keyboardtype, isDisabled, secureTextEntry,autoCapitalize, backgroundColor, ...rest }:TypeInput) {
   return (
     <StackInput
         height={56}
@@ -24,7 +27,9 @@ export function Input({ placeholder,keyboardtype, secureTextEntry,autoCapitalize
             borderRadius: 10,
             borderColor: THEME.colors.green[700],
         }}
-        backgroundColor= {THEME.colors.gray[700]}
+        isDisabled={isDisabled}
+        backgroundColor= {backgroundColor}
+        {...rest}
     >
         <InputField 
             flex={1}
