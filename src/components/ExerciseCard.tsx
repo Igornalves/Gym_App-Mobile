@@ -22,7 +22,7 @@ type Props = TouchableOpacityProps & {
 
 export default function ExerciseCard({...rest}: Props) {
   return (
-   <TouchableOpacity>
+   <TouchableOpacity {...rest}>
     <HStack
       flexDirection='row'
       alignItems='center'

@@ -17,12 +17,20 @@ import {
 } from 'react-native';
 
 import { THEME } from 'src/global/theme/intex';
+import { useNavigation } from '@react-navigation/native';
+import { AppNavigationRoutesProps } from '@routes/app.routes';
 
 export default function Home() {
 
   const [group, setGroup] = useState(['Costas', 'Biceps','Triceps','ombro'])
   const [exercises, setExercise] = useState(['Puxada frontal', 'Remada curvada','Remada unilateral','Levantamento terra'])
   const [groupSelected, setGroupSelected] = useState('Costas')
+
+  const navigation = useNavigation<AppNavigationRoutesProps>();
+
+  function handleOpenExerciseDetails() {
+    navigation.navigate('exercice')
+  }
 
   return (
     <VStack 
@@ -81,7 +89,9 @@ export default function Home() {
           data={exercises}
           keyExtractor={item => item}
           renderItem={({ item }) => (
-            <ExerciseCard/>
+            <ExerciseCard
+              onPress={handleOpenExerciseDetails}
+            />
           )}
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{
