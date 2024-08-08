@@ -24,14 +24,16 @@ export default function HomeHeader() {
         paddingLeft={20}
         paddingBottom={20}
     >
-        <UserPhoto
-            size={65}
-            
-            source={{
-                uri: 'https://github.com/igornalves.png'
-            }}
-            alt='foto de perfil'
-        />
+        <TouchableOpacity>
+            <UserPhoto
+                size={65}
+                
+                source={{
+                    uri: 'https://github.com/igornalves.png'
+                }}
+                alt='foto de perfil'
+            />
+        </TouchableOpacity>
         <VStack 
             width={120} 
             marginLeft={15} 

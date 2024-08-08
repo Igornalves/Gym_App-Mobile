@@ -34,14 +34,14 @@ export default function Home() {
         renderItem={({ item }) => (
           <Group
           name={item}
-          isActive={groupSelected === item}
+          isActive={groupSelected.toLocaleUpperCase() === item.toLocaleUpperCase()}
           onPress={() => setGroupSelected(item)} 
           />
         )}
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
-          marginHorizontal: 25,
+          marginHorizontal: 20,
           marginVertical: 25,
           paddingRight: 50,
           // backgroundColor: "red"

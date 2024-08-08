@@ -1,17 +1,22 @@
 import React from 'react';
-import { Center, Text } from '@gluestack-ui/themed'
+import { VStack } from '@gluestack-ui/themed'
+import ScreenHeader from '@components/ScreenHeader';
+import HistoryCard from '@components/HistoryCard';
 
 export default function History() {
   return (
-    <Center 
+    <VStack 
       flex={1}
-      style={{ 
-        alignItems: 'center', 
-        justifyContent: 'center'
-    }}>
-        <Text color='white'>
-          History
-        </Text>
-    </Center>
+      // style={{ 
+      //   alignItems: 'center', 
+      //   justifyContent: 'center'
+      // }}
+    >
+        <ScreenHeader 
+          title='Histórico de Exercícios'
+        />
+
+        <HistoryCard/>
+    </VStack>
   );
 }
