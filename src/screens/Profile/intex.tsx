@@ -99,12 +99,14 @@ export default function Profile() {
         </Center>
 
         <VStack 
-          paddingHorizontal={30}
+          alignItems='center'
           marginTop={12}
           marginBottom={9}
         >
           <Heading
             marginTop={0}
+            marginLeft={32}
+            alignSelf='flex-start'
             marginBottom={10}
             color={THEME.colors.gray[200]}
             fontSize={THEME.fontSizes.md}
