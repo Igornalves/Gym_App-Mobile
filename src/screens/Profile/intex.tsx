@@ -15,6 +15,8 @@ import {
 import ScreenHeader from '@components/ScreenHeader';
 import UserPhoto from '@components/UserPhoto';
 
+import * as ImagePicker from 'expo-image-picker'
+
 import { 
   VStack 
 } from '@gluestack-ui/themed';
@@ -26,7 +28,7 @@ import
   } 
 from 'react-content-loader/native';
 
-import { ScrollView, TouchableOpacity } from 'react-native';
+import { Alert, ScrollView, TouchableOpacity } from 'react-native';
 import { THEME } from 'src/global/theme/intex';
 import { Input } from '@components/Input';
 import { Button } from '@components/Button';
@@ -34,10 +36,56 @@ import { Button } from '@components/Button';
 export default function Profile() {
 
   const [isLoading, setIsLoading] = useState(true)
+  const [userPhoto, setUserPhoto] = useState('https://github.com/igornalves.png')
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000)
   },[])
+
+  async function handlerUserPhotoSelect() {
+    setIsLoading(true)
+    try {
+      const photoSelected = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        quality: 1,
+        aspect: [4,4],
+        allowsEditing: true,
+        // base64: true
+      })
+      // console.log(photoSelected)
+      
+      function canceladPhoto() {
+        if (photoSelected.canceled) {
+          return;
+        }
+      }
+  
+      function photoSelectedUser() {
+        if (photoSelected.assets && photoSelected.assets.length > 0) {
+          return setUserPhoto(photoSelected.assets[0].uri);
+        }
+      }
+  
+      Alert.alert("Alteracao de Foto","Tem certeza da sua alteracao de foto do perfil",[
+        {
+          text: "Cancelar",
+          onPress: () => console.log('Cancelada a alteracao da foto: ', canceladPhoto()),
+          style: 'cancel'
+        },
+        {
+          text: "Ok",
+          onPress: () => console.log(' alteracao enviada com sucesso, informacoes abaixo:\n',  photoSelectedUser()),
+          style: 'default'
+        },
+      ])
+      
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
+
+  }
 
   return (
     <VStack
@@ -67,13 +115,13 @@ export default function Profile() {
             <UserPhoto
               size={150}
               source={{
-                uri: 'https://github.com/igornalves.png'
+                uri: userPhoto
               }}
               alt='foto de perfil'
             />
           )}
           
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handlerUserPhotoSelect}>
               <Text 
                 color={THEME.colors.green[500]} 
                 fontWeight="bold"

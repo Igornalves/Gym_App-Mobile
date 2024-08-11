@@ -38,7 +38,7 @@ export default function ExerciseCard({...rest}: Props) {
         height={60}
         borderRadius={THEME.fontSizes.md}
         marginRight={10}
-        resizeMode='center'
+        resizeMode='cover'
       />
 
       <VStack flex={1}>

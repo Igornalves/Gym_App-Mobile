@@ -3,7 +3,7 @@ import { Heading, HStack, VStack, Text, Image, Box } from '@gluestack-ui/themed'
 
 import { Feather } from '@expo/vector-icons'
 
-import { TouchableOpacity } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native';
 import { THEME } from 'src/global/theme/intex';
 import { useNavigation } from '@react-navigation/native';
 import { AppNavigationRoutesProps } from '@routes/app.routes';
@@ -78,6 +78,7 @@ export default function Exercices() {
 
         </VStack>
 
+      <ScrollView>  
         <VStack 
           paddingTop={30}
         >
@@ -134,9 +135,8 @@ export default function Exercices() {
               />
             </HStack>
           </Box>
-
         </VStack>
-
+      </ScrollView>
     </VStack>
   );
 }

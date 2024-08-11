@@ -3,7 +3,6 @@ import React from 'react';
 import { GluestackUIProvider } from '@gluestack-ui/themed';
 
 import { 
-  Text, 
   StatusBar
 } from 'react-native';
 

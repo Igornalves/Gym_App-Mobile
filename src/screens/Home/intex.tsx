@@ -57,7 +57,10 @@ export default function Home() {
           paddingRight: 50,
           // backgroundColor: "red"
         }}
-        style={{maxHeight: 100}}
+        style={{
+          maxHeight: 100,
+          minHeight: 100
+        }}
       />
 
       <View style={{ flex: 1, marginTop: 0, paddingTop: 0 }}>

@@ -22,6 +22,7 @@ export default function HistoryCard() {
       backgroundColor={THEME.colors.gray[600]}
     >
       <VStack 
+        flex={1}
         marginRight={10}
       >
           <Heading
@@ -30,6 +31,7 @@ export default function HistoryCard() {
             color='white'
             fontSize={THEME.fontSizes.md}
             textTransform='capitalize'
+            numberOfLines={1}
           >
             Costas
           </Heading>
