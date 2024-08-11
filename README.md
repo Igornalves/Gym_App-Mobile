@@ -45,11 +45,6 @@ onde foi acompanhado o processo de criacao da interface e tambem para implementa
 
 <br>
 
-Aqui abaixo estao algums videos de como a inteface estar rodando: 
-
-<video src="./src/assets/Vídeo sem título ‐ Feito com o Clipchamp.mp4" controls="controls">
-</video>
-
 ## Pré-requisitos
 
 Algums Pré-requisitos importantes para vc poder rodar o projeto na sua maquina local seria vc ter instalado as seguintes ferramentas que sao: 
