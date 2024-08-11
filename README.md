@@ -47,7 +47,7 @@ onde foi acompanhado o processo de criacao da interface e tambem para implementa
 
 Aqui abaixo estao algums videos de como a inteface estar rodando: 
 
-<video src="./src/assets/Vídeo sem título ‐ Feito com o Clipchamp.mp4" controls="controls" style="max-width: 100%; height: auto;">
+<video src="./src/assets/Vídeo sem título ‐ Feito com o Clipchamp.mp4" controls="controls">
 </video>
 
 ## Pré-requisitos
