@@ -9,13 +9,14 @@ from 'react';
 import { 
   Center, 
   Heading, 
-  Text 
+  Text,
 } from '@gluestack-ui/themed'
 
 import ScreenHeader from '@components/ScreenHeader';
 import UserPhoto from '@components/UserPhoto';
 
 import * as ImagePicker from 'expo-image-picker'
+import * as FileSystem from 'expo-file-system';
 
 import { 
   VStack 
@@ -28,7 +29,12 @@ import
   } 
 from 'react-content-loader/native';
 
-import { Alert, ScrollView, TouchableOpacity } from 'react-native';
+import { 
+  Alert, 
+  ScrollView, 
+  TouchableOpacity 
+} from 'react-native';
+
 import { THEME } from 'src/global/theme/intex';
 import { Input } from '@components/Input';
 import { Button } from '@components/Button';
@@ -38,19 +44,27 @@ export default function Profile() {
   const [isLoading, setIsLoading] = useState(true)
   const [userPhoto, setUserPhoto] = useState('https://github.com/igornalves.png')
 
+  // const toast = useToast();
+
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000)
   },[])
 
   async function handlerUserPhotoSelect() {
+
     setIsLoading(true)
+
     try {
+      // definindo a partes da edicao da imagem para o perfil do usuario
       const photoSelected = await ImagePicker.launchImageLibraryAsync({
+        // dfinindo o tipo de midia que vai se editada
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
+        // qualidade da imagem e de 100%
         quality: 1,
+        // o aspecto da edicao da imagem 
         aspect: [4,4],
+        // permitindo que o usuario consiga editar a imagem 
         allowsEditing: true,
-        // base64: true
       })
       // console.log(photoSelected)
       
@@ -60,9 +74,23 @@ export default function Profile() {
         }
       }
   
-      function photoSelectedUser() {
-        if (photoSelected.assets && photoSelected.assets.length > 0) {
-          return setUserPhoto(photoSelected.assets[0].uri);
+      async function photoSelectedUser() {
+        try{
+          if (photoSelected.assets && photoSelected.assets.length > 0) {
+
+            const photoInfo = await FileSystem.getInfoAsync(photoSelected.assets[0].uri)
+            console.log('photoInfo: ', photoInfo);
+
+            if (photoInfo.exists && (photoInfo.size / 1024 / 1024) > 3) {
+              return Alert.alert("Essa Imagem é muito grande!", "Escolha uma de até 3MB")
+            } 
+
+            setUserPhoto(photoSelected.assets[0].uri);
+          }
+
+        } catch (error) {
+          console.error('Erro ao obter informações do arquivo', error);
+          Alert.alert("Erro", "Não foi possível processar a imagem.");
         }
       }
   
