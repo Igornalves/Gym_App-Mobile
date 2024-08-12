@@ -50,30 +50,19 @@ onde foi acompanhado o processo de criacao da interface e tambem para implementa
 Algums Pré-requisitos importantes para vc poder rodar o projeto na sua maquina local seria vc ter instalado as seguintes ferramentas que sao: 
 
 - [Node.js](#https://nodejs.org/en/download/package-manager/current)
-<br>
-ambiente de execução JavaScript que permite executar código JavaScript fora de um navegador
-<br>
-<br>
+#### Ambiente de execução JavaScript que permite executar código JavaScript fora de um navegador
+
 
 - [Expo Go](#https://expo.dev/go)
-<br>
-aplicativo móvel que permite testar e visualizar aplicativos React Native em desenvolvimento diretamente em dispositivos Android e iOS sem a necessidade de compilar ou instalar o aplicativo completo
-<br>
-<br>
+#### Aplicativo móvel que permite testar e visualizar aplicativos React Native em desenvolvimento diretamente em dispositivos Android e iOS sem a necessidade de compilar ou instalar o aplicativo completo
 
 - [Vs.code](#https://code.visualstudio.com/download)
-<br>
-editor de código-fonte leve, mas poderoso, desenvolvido pela Microsoft. É amplamente utilizado por desenvolvedores devido à sua flexibilidade, extensibilidade e excelente suporte para diversas linguagens de programação
-<br>
-<br>
+#### Editor de código-fonte leve, mas poderoso, desenvolvido pela Microsoft. É amplamente utilizado por desenvolvedores devido à sua flexibilidade, extensibilidade e excelente suporte para diversas linguagens de programação
 
 - [Git](#https://git-scm.com/downloads)
-<br>
-sistema de controle de versão distribuído, que permite que desenvolvedores rastreiem as mudanças no código-fonte durante o desenvolvimento de software. Ele é amplamente utilizado por equipes de desenvolvimento para colaborar de forma eficiente e segura, mantendo o histórico de alterações e facilitando o gerenciamento de versões do software.
-<br>
-<br>
+#### Sistema de controle de versão distribuído, que permite que desenvolvedores rastreiem as mudanças no código-fonte durante o desenvolvimento de software. Ele é amplamente utilizado por equipes de desenvolvimento para colaborar de forma eficiente e segura, mantendo o histórico de alterações e facilitando o gerenciamento de versões do software.
 
-## Executando o Projeto de forma local 
+## Instalação e Configuração
 
 primeiro passo para vc conseguir executar o projeto de forma local seria usando o git instalado na sua maquina para fazer um clone do projeto para alguma pasta que vc deseja fazer isso
 
@@ -90,6 +79,8 @@ Apos cria sua pasta vc vai entra no vscode para utilizar o seguint comando no te
 ```powershell
 git clone https://github.com/Igornalves/Gym_App-Mobile.git
 ```
+
+## Executando o Projeto de forma local 
 
 Com o projeto ja estando clonado vc agora vc poder instalar todas as dependencias do projeto usando o seguinte comandado
 
