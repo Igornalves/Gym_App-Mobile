@@ -20,7 +20,7 @@ export default function Routes() {
           // para garantir quee nao tenho um glit na transicao de uma tela para outra 
           <Box flex={1} backgroundColor={THEME.colors.gray[700]}>
                <NavigationContainer>
-                    <AppRoutes/>
+                    <AuthRoutes/>
                </NavigationContainer>
           </Box>
      );

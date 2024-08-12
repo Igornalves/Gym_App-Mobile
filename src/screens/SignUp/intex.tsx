@@ -22,12 +22,31 @@ import { ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AuthNavigatiorRoutesProps } from '@routes/auth.routes';
 
+import { useForm, Controller } from 'react-hook-form'
+
+type FormDataProps = {
+  name: string;
+  email: string;
+  password: string;
+  password_confirm: string;
+}
+
 export default function SignUp() {
 
   const navigation = useNavigation<AuthNavigatiorRoutesProps>();
 
   function handleGoBack() {
     navigation.goBack()
+  }
+
+  const { control, handleSubmit, formState: {errors} } = useForm<FormDataProps>({
+    // defaultValues: {
+    //   name: 'igor'
+    // }
+  });
+
+  function handleSignUp({ email,name,password,password_confirm }:FormDataProps) {
+    console.log({ email,name,password,password_confirm })
   }
 
   return (
@@ -37,7 +56,6 @@ export default function SignUp() {
     >
       <VStack 
         flex={1}
-        // backgroundColor={THEME.colors.gray[700]}
       >
         <Image 
           source={BackGroundImg}
@@ -48,8 +66,8 @@ export default function SignUp() {
         />
 
         <Center 
-          marginTop={130} 
-          marginBottom={95}
+          marginTop={100} 
+          marginBottom={40}
           alignItems='center'
           justifyContent='center'
         >
@@ -71,31 +89,95 @@ export default function SignUp() {
             fontSize={THEME.fontSizes.xl}
             fontFamily={THEME.fonts.heading}
           >
-            Acesse sua conta
+            Crie sua Conta
           </Heading>
 
-          <Input
-            placeholder='Nome'
-            backgroundColor={THEME.colors.gray[700]}
-            keyboardtype='default'
+          <Controller
+            control={control}
+            name='name'
+            rules={{
+              required:'Informe o nome !!!!'
+            }}
+            render= {({ field: { onChange, value }}) => (
+              <Input
+                placeholder='Nome'
+                backgroundColor={THEME.colors.gray[700]}
+                onChangeText={onChange}
+                value={value}
+                errorMessage={errors.name?.message}
+              />
+            )}
           />
-          <Input
-            placeholder='Email'
-            backgroundColor={THEME.colors.gray[700]}
-            keyboardtype='email-address'
+
+          {/* <Text color='white'>
+            {errors.name?.message}
+          </Text> */}
+
+          <Controller
+            control={control}
+            name='email'
+            rules={{
+              required: 'Informe o Email !!!!',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'E-mail Invalido !!!'
+              }
+            }}
+            render= {({ field: { onChange,value }}) => (
+              <Input
+                placeholder='Email'
+                backgroundColor={THEME.colors.gray[700]}
+                autoCapitalize='none'
+                onChangeText={onChange}
+                value={value}
+                errorMessage={errors.email?.message}
+              />
+            )}
           />
-          <Input
-            placeholder='Senha'
-            backgroundColor={THEME.colors.gray[700]}
-            secureTextEntry
+
+          {/* <Text color='white'>
+            {errors.email?.message}
+          </Text> */}
+
+          <Controller
+            control={control}
+            name='password'
+            
+            render= {({ field: { onChange,value }}) => (
+              <Input
+                placeholder='Senha'
+                backgroundColor={THEME.colors.gray[700]}
+                secureTextEntry
+                onChangeText={onChange}
+                value={value}
+                errorMessage={errors.password?.message}
+              />
+            )}
+          />
+
+          <Controller
+            control={control}
+            name='password_confirm'
+            render= {({ field: { onChange,value }}) => (
+              <Input
+                placeholder='Confirmar Senha'
+                backgroundColor={THEME.colors.gray[700]}
+                secureTextEntry
+                onChangeText={onChange}
+                value={value}
+                onSubmitEditing={handleSubmit(handleSignUp)}
+                returnKeyType='send'
+              />
+            )}
           />
 
           <Button
             title='Cria e acessar' 
+            onPress={handleSubmit(handleSignUp)}
           />
 
           <Center
-            marginTop={100}
+            marginTop={80}
           >
             <ButtonLine
               title='Voltar para o Login'
