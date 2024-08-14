@@ -20,10 +20,11 @@ type TypeInput = TextInputProps & {
 
 export function Input({ errorMessage = null,placeholder,keyboardtype, isDisabled, secureTextEntry,autoCapitalize, backgroundColor, ...rest }:TypeInput) {
 
+    // criando uma constante para enviar a mensagem de erro quando os dados nao forem os adquado para o input do formulario, constante do tipo boolean
     const isInvalid = !!errorMessage
 
   return (
-    <FormControl isInvalid={isInvalid} alignItems='center'>
+    <FormControl isInvalid={isInvalid}>
         <StackInput
             height={56}
             width={328}
@@ -36,6 +37,7 @@ export function Input({ errorMessage = null,placeholder,keyboardtype, isDisabled
             }}
             isDisabled={isDisabled}
             isInvalid={isInvalid}
+            // passando uma estilizacao para sinalizar o erro no input
             $invalid={{
                 borderWidth: 1,
                 borderRadius: 10,
@@ -53,10 +55,11 @@ export function Input({ errorMessage = null,placeholder,keyboardtype, isDisabled
                 placeholder={placeholder}
                 color={THEME.colors.gray[100]}
                 placeholderTextColor={THEME.colors.gray[300]}
+                // nao esqueca de colocar o rest para que ele receba todas as propriedade do Input
                 {...rest}
             />
         </StackInput>
-        <FormControlErrorText color='red'>
+        <FormControlErrorText color='red' marginLeft={15}>
             {errorMessage}
         </FormControlErrorText>
     </FormControl>
