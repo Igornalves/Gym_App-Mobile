@@ -48,6 +48,7 @@ export default function History() {
             marginTop={25}
             color={THEME.colors.gray[200]}
             fontSize={THEME.fontSizes.md}
+            fontFamily={THEME.fonts.heading}
           >
             {section.title}
           </Heading>

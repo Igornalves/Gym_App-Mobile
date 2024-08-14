@@ -185,6 +185,7 @@ export default function Profile() {
             alignSelf='flex-start'
             marginBottom={10}
             color={THEME.colors.gray[200]}
+            fontFamily={THEME.fonts.heading}
             fontSize={THEME.fontSizes.md}
           >
             Alterar senha

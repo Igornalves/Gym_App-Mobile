@@ -77,6 +77,7 @@ export default function Home() {
           <Heading 
             color={THEME.colors.gray[200]}
             fontSize={THEME.fontSizes.md}
+            fontFamily={THEME.fonts.heading}
           >
             Exercicios
           </Heading>

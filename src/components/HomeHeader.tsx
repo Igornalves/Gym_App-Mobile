@@ -104,6 +104,7 @@ export default function HomeHeader() {
                         marginBottom={0}
                         color={THEME.colors.gray[100]}
                         fontSize={THEME.fontSizes.md}
+                        fontFamily={THEME.fonts.heading}
                     >
                         Igor Alves
                     </Heading>

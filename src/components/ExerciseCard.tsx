@@ -44,6 +44,7 @@ export default function ExerciseCard({...rest}: Props) {
       <VStack flex={1}>
         <Heading 
           fontSize={THEME.fontSizes.lg}
+          fontFamily={THEME.fonts.heading}
           color={THEME.colors.white}
           marginBottom={0}
           marginTop={0}

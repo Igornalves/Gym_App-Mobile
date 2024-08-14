@@ -30,6 +30,7 @@ export default function HistoryCard() {
             marginTop={0}
             color='white'
             fontSize={THEME.fontSizes.md}
+            fontFamily={THEME.fonts.heading}
             textTransform='capitalize'
             numberOfLines={1}
           >

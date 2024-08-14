@@ -53,6 +53,7 @@ export default function Exercices() {
               marginBottom={0}
               marginTop={0}
               color={THEME.colors.gray[100]}
+              fontFamily={THEME.fonts.heading}
               flexShrink={1}
             >
               Puxada Frontal
