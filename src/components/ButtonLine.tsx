@@ -10,9 +10,13 @@ import { ButtonProps } from 'react-native';
 
 interface TypeButton extends ButtonProps {
     title: string
+    marginBottom?: number
+    marginTop?: number
+    marginLeft?: number
+    marginRight?: number
 }
 
-export function ButtonLine({ title, ...rest }:TypeButton) {
+export function ButtonLine({ title, marginBottom, marginTop, marginLeft, marginRight, ...rest }:TypeButton) {
   return (
     <ButtonBase
         height={65}
@@ -23,6 +27,10 @@ export function ButtonLine({ title, ...rest }:TypeButton) {
         justifyContent='center'
         borderColor={THEME.colors.green[500]}
         borderWidth={1}
+        marginBottom={marginBottom}
+        marginTop={marginTop}
+        marginLeft={marginLeft}
+        marginRight={marginRight}
         {...rest}
     >
         <ButtonText

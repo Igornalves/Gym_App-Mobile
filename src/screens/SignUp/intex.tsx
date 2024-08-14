@@ -18,7 +18,7 @@ import { Input } from '@components/Input';
 import { Button } from '@components/Button';
 import { ButtonLine } from '@components/ButtonLine';
 
-import { ScrollView } from 'react-native';
+import { Alert, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AuthNavigatiorRoutesProps } from '@routes/auth.routes';
 
@@ -35,6 +35,7 @@ type FormDataProps = {
   password_confirm: string;
 }
 
+// cirando o objeto que sera importante para definir como vai ser a validacoes do nossos campos do formulario
 const signUpSchema = yup.object({
   name: yup.string().required('Informe o nome'),
   email: yup.string().required('Informe o seu Email').email('E-mail Invalido'),
@@ -44,6 +45,7 @@ const signUpSchema = yup.object({
 
 export default function SignUp() {
 
+  // criando uma constantee para navegacao entre paginas do login
   const navigation = useNavigation<AuthNavigatiorRoutesProps>();
 
   function handleGoBack() {
@@ -60,6 +62,12 @@ export default function SignUp() {
 
   function handleSignUp({ email,name,password,password_confirm }:FormDataProps) {
     console.log({ email,name,password,password_confirm })
+    Alert.alert('Conta Criada', 'Sua conta foi criada com sucesso', [
+      {
+        text: 'ok',
+        onPress: () => navigation.navigate('loginUser')
+      }
+    ])
   }
 
   return (
@@ -179,10 +187,12 @@ export default function SignUp() {
             title='Cria e acessar' 
             onPress={handleSubmit(handleSignUp)}
             marginTop={15}
+
           />
 
           <Center
             marginTop={70}
+            marginBottom={30}
           >
             <ButtonLine
               title='Voltar para o Login'

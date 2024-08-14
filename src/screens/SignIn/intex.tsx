@@ -51,7 +51,7 @@ export default function SignIn() {
 
         <Center 
           marginTop={125}
-          marginBottom={155}
+          marginBottom={140}
           alignItems='center'
           justifyContent='center'
         >
