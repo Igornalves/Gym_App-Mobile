@@ -103,6 +103,7 @@ export default function SignIn() {
           <ButtonLine
             title='Cria conta'
             onPress={handleNewAccount}
+            marginBottom={35}
           />
       </Center>
       </VStack>

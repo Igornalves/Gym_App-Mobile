@@ -27,6 +27,10 @@ import { useForm, Controller } from 'react-hook-form'
 import * as yup from 'yup'
 import  { yupResolver } from '@hookform/resolvers/yup'
 
+import axios from 'axios';
+
+import { api } from '@services/Api';
+
 // tipagem para receber os dados neceessarios
 type FormDataProps = {
   name: string;
@@ -60,14 +64,37 @@ export default function SignUp() {
     // }
   });
 
-  function handleSignUp({ email,name,password,password_confirm }:FormDataProps) {
-    console.log({ email,name,password,password_confirm })
-    Alert.alert('Conta Criada', 'Sua conta foi criada com sucesso', [
-      {
-        text: 'ok',
-        onPress: () => navigation.navigate('loginUser')
+  async function handleSignUp({ email,name,password }:FormDataProps) {
+    try {
+      const response = await api.post('/users', {
+        name,
+        email,
+        password
+      })
+      console.log(response.data)
+    } catch(error) {
+      // trantando o erro de forma completa verificando o erro do Axios para mostra a mensagem para o cliente da Aplicacao
+      if (axios.isAxiosError(error)) {
+        Alert.alert(error.response?.data.message,'Troque o E-mail para que voce possa estar se cadastrando no sistema')
       }
-    ])
+    }
+
+    // formato para fazer reequisicoes usando o Fetch API do proprio JavaScript
+    // console.log({ email,name,password })
+    // const response = await fetch('http://192.168.0.104:3333/users', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     name,
+    //     email,
+    //     password
+    //   })
+    // })
+    // const data = await response.json();
+    // console.log(data);
   }
 
   return (
