@@ -1,26 +1,26 @@
-# Projeto de Aplicativo Mobile para Academia 
+# Mobile Application Project for a Gym
 
-Bom este projeto se refere a uma interface funcional para atender a uma academia de forma completa, tambem e um projeto feito para conhecimento mais aprofundados na tecnologia de desenvolvimento hibrido para mobile.
+Well, this project refers to a functional interface to serve a gym in a complete way, and it is also a project made for more in-depth knowledge in hybrid development technology for mobile.
 
-## Índice
+## Index
 
-- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação e Configuração](#instalação-e-configuração)
-- [Execução do Projeto](#execução-do-projeto)
+- [Technologies and Tools Used](#technologies-and-tools-used)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation and Configuration](#installation-and-configuration)
+- [Project Execution](#project-execution)
 
-## Tecnologias e Ferramentas Utilizadas
+## Technologies and Tools Used
 
-Foi Utilizado no projeto varias tecnologias para desenvolvimento das interfaces e sua conexao com o Back-end:
+Several technologies were used in the project to develop the interfaces and their connection with the Back-end:
 
-<div style="display: inline_block"  align="center">
-  <img align="center" alt="TypeScript" height="49" width="51" src="https://skillicons.dev/icons?i=typescript">
-  <img align="center" alt="React" height="49" width="51" src="https://skillicons.dev/icons?i=react">
-  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=nodejs">
-  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=figma">
-  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=styledcomponents">
-  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=svg">
+<div style="display: inline_block" align="center">
+<img align="center" alt="TypeScript" height="49" width="51" src="https://skillicons.dev/icons?i=typescript">
+<img align="center" alt="React" height="49" width="51" src="https://skillicons.dev/icons?i=react">
+ <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=nodejs">
+ <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=figma">
+ <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=styledcomponents">
+ <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=svg">
 </div>
 
 <br>
@@ -33,11 +33,11 @@ Foi Utilizado no projeto varias tecnologias para desenvolvimento das interfaces 
 - [react-native-svg-transformer](#https://www.npmjs.com/package/react-native-svg-transformer)
 - [styled-components](#https://styled-components.com/docs)
 
-## Estrutura do Projeto
+## Project Structure
 
-Toda a sua arquitetura de pagina e seu desing foi feito como prototipacao no Figma Community
-no projeto [Ignite Gym](#https://figma.com/design/gnFbyGC1i5IdhIepGyB0rG/Ignite-Gym-(Community)?node-id=37-6&t=ibNmFWSpycz5UZyI-0)
-onde foi acompanhado o processo de criacao da interface e tambem para implementacao de APP real para um cliente ficticio
+All of its page architecture and design was done as a prototype in Figma Community
+in the [Ignite] project. Gym](#https://figma.com/design/gnFbyGC1i5IdhIepGyB0rG/Ignite-Gym-(Community)?node-id=37-6&t=ibNmFWSpycz5UZyI-0)
+where the process of creating the interface was followed and also for implementing a real APP for a fictitious client
 
 <div>
 <img align="center" alt="Python" src="./src/assets/imagem do figma.png">
@@ -45,28 +45,27 @@ onde foi acompanhado o processo de criacao da interface e tambem para implementa
 
 <br>
 
-## Pré-requisitos
+## Prerequisites
 
-Algums Pré-requisitos importantes para vc poder rodar o projeto na sua maquina local seria vc ter instalado as seguintes ferramentas que sao: 
+Some important prerequisites for you to be able to run the project on your local machine would be that you have installed the following tools:
 
 - [Node.js](#https://nodejs.org/en/download/package-manager/current)
-#### Ambiente de execução JavaScript que permite executar código JavaScript fora de um navegador
-
+#### JavaScript runtime environment that allows you to execute JavaScript code outside of a browser
 
 - [Expo Go](#https://expo.dev/go)
-#### Aplicativo móvel que permite testar e visualizar aplicativos React Native em desenvolvimento diretamente em dispositivos Android e iOS sem a necessidade de compilar ou instalar o aplicativo completo
+#### A mobile app that lets you test and preview React Native apps under development directly on Android and iOS devices without having to compile or install the full app
 
 - [Vs.code](#https://code.visualstudio.com/download)
-#### Editor de código-fonte leve, mas poderoso, desenvolvido pela Microsoft. É amplamente utilizado por desenvolvedores devido à sua flexibilidade, extensibilidade e excelente suporte para diversas linguagens de programação
+#### A lightweight yet powerful source code editor developed by Microsoft. It is widely used by developers due to its flexibility, extensibility, and excellent support for multiple programming languages
 
 - [Git](#https://git-scm.com/downloads)
-#### Sistema de controle de versão distribuído, que permite que desenvolvedores rastreiem as mudanças no código-fonte durante o desenvolvimento de software. Ele é amplamente utilizado por equipes de desenvolvimento para colaborar de forma eficiente e segura, mantendo o histórico de alterações e facilitando o gerenciamento de versões do software.
+#### A distributed version control system that allows developers to track changes to source code during software development. It is widely used by development teams to collaborate efficiently and securely, maintain change history, and facilitate software version management.
 
-## Instalação e Configuração
+## Installation and Configuration
 
-primeiro passo para vc conseguir executar o projeto de forma local seria usando o git instalado na sua maquina para fazer um clone do projeto para alguma pasta que vc deseja fazer isso
+The first step to run the project locally would be to use Git installed on your machine to clone the project to a folder where you want to do this
 
-crie uma pasta: 
+Create a folder:
 
 <div>
 <img align="center" alt="Python" src="https://www.ciabyte.com.br/imagens/pastas-windows-explorer.png">
@@ -74,29 +73,29 @@ crie uma pasta:
 
 <br>
 
-Apos cria sua pasta vc vai entra no vscode para utilizar o seguint comando no terminal 
+After creating your folder, you will enter VSCode to use the following command in the terminal
 
-```powershell
+```Powershell
 git clone https://github.com/Igornalves/Gym_App-Mobile.git
 ```
 
-## Executando o Projeto de forma local 
+## Running the Project Locally
 
-Com o projeto ja estando clonado vc agora vc poder instalar todas as dependencias do projeto usando o seguinte comandado
+With the project already cloned, you can now install all the project dependencies using the following command
 
-```terminal
-npm install 
+```Terminal
+npm install
 ```
 
-agora com todas as dependencias instaladas vc pode executar o projeto de forma completa 
+Now that all the dependencies are installed, you can run the project from complete form
 
-OBS:. a versao do Expo mais a do Expo Go tem que estar sincronizadas, Ex:. SDK:51 / "expo": "~51.0.22". Desta forma o seu APP vai funcinar de forma completa e local 
+NOTE: The Expo version and the Expo Go version must be synchronized, Ex: SDK:51 / "expo": "~51.0.22". This way your APP will work fully and locally
 
 ```
-npm run start 
+npm run start
 ```
 
-Logo apos isso vc vera uma opcao para conectar o seu APP usando o QR code para localizar o seu App rodado na rede local 
+Right after that you will see an option to connect your APP using the QR code to locate your App running on the local network
 
 <div>
 <img align="center" alt="Python" src="https://miro.medium.com/v2/resize:fit:1400/1*RLn8J9mFSo6O9N6jf7Pomw.png">
@@ -104,4 +103,4 @@ Logo apos isso vc vera uma opcao para conectar o seu APP usando o QR code para l
 
 <br>
 
-Desta forma agora vc podera usar o aplicativo e tambem fazeer alteracoes no codigo fonte do projeto.
+This way you will now be able to use the application and also make changes to the project's source code.
