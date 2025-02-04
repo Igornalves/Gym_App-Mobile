@@ -36,7 +36,7 @@ Several technologies were used in the project to develop the interfaces and thei
 ## Project Structure
 
 All of its page architecture and design was done as a prototype in Figma Community
-in the [Ignite] project. Gym](#https://figma.com/design/gnFbyGC1i5IdhIepGyB0rG/Ignite-Gym-(Community)?node-id=37-6&t=ibNmFWSpycz5UZyI-0)
+in the [Ignite] project. Gym](# https://figma.com/design/gnFbyGC1i5IdhIepGyB0rG/Ignite-Gym-(Community)?node-id=37-6&t=ibNmFWSpycz5UZyI-0)
 where the process of creating the interface was followed and also for implementing a real APP for a fictitious client
 
 <div>
